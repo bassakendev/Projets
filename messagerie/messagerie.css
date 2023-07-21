@@ -1,0 +1,70 @@
+body {
+    margin: 0px;
+}
+
+#messageBox {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    ;
+}
+
+#headBox {
+    background-color: black;
+    color: blanchedalmond;
+    text-align: center;
+    height: 60px;
+}
+
+#bodyBox {
+    flex: 1;
+    background-color: teal;
+    color: white;
+    font-family: sans-serif;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#footerBox {
+    background-color: teal;
+    color: blanchedalmond;
+}
+
+p {
+    width: auto;
+    max-width: 200px;
+    background-color: darkolivegreen;
+    padding: 10px 0px 10px 10px;
+    border-radius: 0px 10px 10px 10px;
+}
+
+.userMessage {
+    background-color: darkslategray;
+    margin-left: auto;
+    padding: 10px 0px 10px 10px;
+    border-radius: 10px 0px 10px 10px;
+}
+
+form {
+    display: flex;
+}
+
+form input {
+    background-color: black;
+    color: white;
+    flex: 1;
+    height: 40px;
+    padding-left: 25px;
+    outline: none;
+    border-radius: 15px;
+    margin: 5px;
+}
+
+form button {
+    background-color: darkcyan;
+    color: rgb(255, 255, 255);
+    border-radius: 50%;
+    margin: 5px;
+    opacity: 0;
+    transition: all 0.5s;
+}
