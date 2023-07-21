@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="formulaire.css">
+    <script src="formulaire.js" defer></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+<style>
+
+body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: darkslategray;
+        color: blanchedalmond;
+    }
+    
+    body div {
+        padding: 10px;
+        margin: 10px;
+        border: 1px solid blanchedalmond;
+    }
+    
+    input {
+        width: 300px;
+        height: 20px;
+        outline: none;
+    }
+    
+    body>div h1 {
+        position: relative;
+        text-align: center;
+    }
+    
+    body div p:last-child {
+        color: white;
+        font-weight: bold;
+        font-size: larger;
+        text-align: center;
+    }
+    
+    #alerteNam {
+        position: relative;
+        color: red;
+        bottom: 10px;
+        display: none;
+    }
+    
+    #alerteTel {
+        position: relative;
+        color: red;
+        bottom: 10px;
+        display: none;
+    }
+    
+    #alertePass {
+        position: relative;
+        color: red;
+        bottom: 20px;
+        display: none;
+    }
+    
+    #alerteMail {
+        position: relative;
+        color: red;
+        bottom: 20px;
+        display: none;
+    }
+    
+    #homme {
+        width: 150px;
+    }
+    
+    #femme {
+        width: 150px;
+    }
+    
+    button {
+        position: relative;
+        width: 30%;
+        background-color: blanchedalmond;
+        left: 50%;
+    }
+
+</style>
+
+    <div id="container">
+
+        <h1>Fiche D'Inscription ..!</h1>
+
+
+        <form action="post"></form>
+
+        <p><label for="username"> NOM : </label><input type="text" name="name" id="userName" placeholder="Toto Banda..."></p>
+        <p id="alerteNam">le nom et le prenom doivent au moins contenir 3 lettres </p>
+
+        <p><label for="username"> PRENOM : </label><input type="text" name="prenom" id="userPrenom" placeholder="Bob Baba..."></p>
+
+
+        <p><input type="radio" name="genre" id="homme">HOMME
+            <input type="radio" name="genre" id="femme">FEMME</p>
+
+
+        <p><label for="tel"> NUMERO DE TELEPHONE :</label>
+            <select name="tel" id="tel">
+                <option value="">+237</option>
+                <option value="">+1</option>
+                <option value="">+34</option>
+            </select>
+            <input type="tel" name="telephone" id="telephone"></p>
+        <p id="alerteTel">une erreur a été détectée sur le contact il ne doit contenir que des chiffres</p>
+
+
+        <p><label for="password"> MOT DE PASSE : </label><input type="password" name="motDePasse" placeholder="********" id="motDePasse1"></p>
+        <p id="alertePass">le mot de passe doit contrnir 8 carractères des chiffres des lettres minuscules et aucun caractères specials</p>
+
+        <p><label for="password"> CONFIRMER LE MOT DE PASSE : </label><input type="password" name="motDePasse" id="motDePasse2"></p>
+
+
+        <p><label for="email"> ADRESSE EMAIL: </label><input type="email" name="email" id="email" placeholder="...@gmail.com"></p>
+        <p id="alerteMail">mauvaise saisie de l'adresse email mal saisi</p>
+
+        <button id="envoyer" type="submit">ENVOYER</button>
+        </form>
+
+
+
+        <p>Veillez vous rassurer que tous les champs ont été bien remplis</p>
+
+
+    </div>
+
+    <p id="teste">mamacita</p>
+
+<script>
+
+const userName = document.getElementById("userName");
+const userPrenom = document.getElementById("userPrenom");
+const telephone = document.getElementById("telephone");
+const motDePasse1 = document.getElementById("motDePasse1");
+const motDePasse2 = document.getElementById("motDePasse2");
+const email = document.getElementById("email");
+const submit = document.getElementById("envoyer");
+
+
+const verifyUserName = () => {
+
+    let userNameVal = document.querySelector("#userName").value;
+    let str = /^([a-z A-Z]{3,})$/;
+
+    if (str.test(userNameVal)) {
+        document.getElementById("alerteNam").style.display = "none";
+        userName.style.border = "3px solid green";
+        return userNameVal;
+
+    } else {
+        document.getElementById("alerteNam").style.display = "inherit";
+        userName.style.border = "3px solid red";
+        return false;
+    }
+
+}
+
+const verifyUserPrenom = () => {
+    let userPrenomVal = document.querySelector("#userPrenom").value;
+    let str = /^([a-z A-Z]{3,})$/;
+
+    if (str.test(userPrenomVal)) {
+        userPrenom.style.border = "3px solid green";
+        return userPrenomVal;
+
+    } else {
+        userPrenom.style.border = "3px solid red";
+        return false;
+    }
+
+}
+
+const verifyUserTel = () => {
+
+    let telephoneVal = document.querySelector("#telephone").value;
+    let str = /^[0-9]{9}$/;
+
+    if (str.test(telephoneVal)) {
+        document.getElementById("alerteTel").style.display = "none";
+        telephone.style.border = "3px solid green";
+        return telephoneVal;
+
+    } else {
+        document.getElementById("alerteTel").style.display = "inherit";
+        telephone.style.border = "3px solid red";
+        return false;
+    }
+
+}
+
+const verifyUserPass1 = () => {
+
+    let motDePasse1Val = document.querySelector("#motDePasse1").value;
+    let str = /^[a-z0-9]{8,8}$/;
+
+    if (str.test(motDePasse1Val)) {
+        document.getElementById("alertePass").style.display = "none";
+        motDePasse1.style.border = "3px solid green";
+        return motDePasse1Val;
+
+    } else {
+        document.getElementById("alertePass").style.display = "inherit";
+        motDePasse1.style.border = "3px solid red";
+        return false;
+
+    }
+
+}
+
+const verifyUserPass2 = () => {
+    let motDePasse2Val = document.querySelector("#motDePasse2").value;
+    let motDePasse1Val = document.querySelector("#motDePasse1").value;
+
+    if (motDePasse1Val === motDePasse2Val) {
+        motDePasse2.style.border = "3px solid green";
+        return motDePasse2Val;
+
+    } else {
+        motDePasse2.style.border = "3px solid red";
+        return false;
+
+    }
+}
+
+const verifyUserEmail = () => {
+
+    const emailVal = document.querySelector("#email").value;
+    const str = /^[a-zA-Z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$/;
+
+    if (str.test(emailVal)) {
+        document.getElementById("alerteMail").style.display = "none";
+        email.style.border = "3px solid green";
+        return emailVal;
+
+    } else {
+        document.getElementById("alerteMail").style.display = "inherit";
+        email.style.border = "3px solid red";
+        return false;
+
+    }
+}
+let str = /^[a-zA-Z0-9.!#$%&'*+/=?^_'{|}~-]+@[a-zA-Z0-9-]+*$/.
+
+userName.addEventListener("blur", verifyUserName);
+userPrenom.addEventListener("blur", verifyUserPrenom);
+telephone.addEventListener("blur", verifyUserTel);
+motDePasse1.addEventListener("blur", verifyUserPass1);
+motDePasse2.addEventListener("blur", verifyUserPass2);
+email.addEventListener("blur", verifyUserEmail);
+
+
+submit.addEventListener("click", (event) => {
+    let canSend = true;
+    const name = verifyUserName();
+    const surname = verifyUserPrenom();
+    const tel = verifyUserTel();
+    const pwd = verifyUserPass1();
+    const email = verifyUserEmail();
+
+    if (name && surname && tel && pwd && email) {
+        alert(JSON.stringify({ name, surname, tel, pwd, email }, null, 4));
+    } else {
+        event.preventDefault();
+    }
+
+})
+
+</script>
+
+
+</body>
+
+</html>

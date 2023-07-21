@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="formulaire.css">
+    <script src="formulaire.js" defer></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container">
+
+        <h1>Fiche D'Inscription ..!</h1>
+
+
+        <form action="post"></form>
+
+        <p><label for="username"> NOM : </label><input type="text" name="name" id="userName" placeholder="Toto Banda..."></p>
+        <p id="alerteNam">le nom et le prenom doivent au moins contenir 3 lettres </p>
+
+        <p><label for="username"> PRENOM : </label><input type="text" name="prenom" id="userPrenom" placeholder="Bob Baba..."></p>
+
+
+        <p><input type="radio" name="genre" id="homme">HOMME
+            <input type="radio" name="genre" id="femme">FEMME</p>
+
+
+        <p><label for="tel"> NUMERO DE TELEPHONE :</label>
+            <select name="tel" id="tel">
+                <option value="">+237</option>
+                <option value="">+1</option>
+                <option value="">+34</option>
+            </select>
+            <input type="tel" name="telephone" id="telephone"></p>
+        <p id="alerteTel">une erreur a été détectée sur le contact il ne doit contenir que des chiffres</p>
+
+
+        <p><label for="password"> MOT DE PASSE : </label><input type="password" name="motDePasse" placeholder="********" id="motDePasse1"></p>
+        <p id="alertePass">le mot de passe doit contrnir 8 carractères des chiffres des lettres minuscules et aucun caractères specials</p>
+
+        <p><label for="password"> CONFIRMER LE MOT DE PASSE : </label><input type="password" name="motDePasse" id="motDePasse2"></p>
+
+
+        <p><label for="email"> ADRESSE EMAIL: </label><input type="email" name="email" id="email" placeholder="...@gmail.com"></p>
+        <p id="alerteMail">mauvaise saisie de l'adresse email mal saisi</p>
+
+        <button id="envoyer" type="submit">ENVOYER</button>
+        </form>
+
+
+
+        <p>Veillez vous rassurer que tous les champs ont été bien remplis</p>
+
+
+    </div>
+
+    <p id="teste">mamacita</p>
+
+
+
+
+</body>
+
+</html>
