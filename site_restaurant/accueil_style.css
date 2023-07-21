@@ -1,0 +1,195 @@
+body {
+    background-color: rgb(238, 238, 238);
+    margin: 0px;
+}
+
+:root {
+    --ombre: 5px 23px 20px rgb(218, 218, 218);
+}
+
+body header {
+    background-color: white;
+    text-align: center;
+    padding: 45px 0px 25px 0px;
+    box-shadow: var(--ombre);
+    width: auto;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+}
+
+section>p {
+    text-align: center;
+}
+
+section>p+div {
+    text-align: center;
+    background-color: rgb(243, 243, 243);
+    padding-bottom: 15vw;
+}
+
+.en_gras {
+    font-weight: bold;
+    font-size: 70px;
+}
+
+section>p+div p:nth-child(2) {
+    color: rgb(141, 141, 141);
+}
+
+section>p+div p:last-child {
+    background-image: linear-gradient( palevioletred, violet);
+    font-size: 20px;
+    box-shadow: var(--ombre);
+    padding: 35px 0px 35px 0px;
+    margin: 5vw 20vw 5vw 20vw;
+    border-radius: 80px;
+    color: white;
+}
+
+section>p+div+div {
+    background-color: #fafafa;
+    padding: 5vw;
+}
+
+section>p+div+div p:last-child {
+    background-color: rgb(251, 218, 255);
+}
+
+.etape {
+    background: white;
+    font-size: 20px;
+    box-shadow: var(--ombre);
+    background-color: rgb(243, 243, 243);
+    padding: 70px 0px 70px 0px;
+    margin: 5vw 2vw 7vw 2vw;
+    border-radius: 60px;
+    text-align: center;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+section>p+div+div p span {
+    background-color: violet;
+    padding: 20px 30px 20px 30px;
+    border-radius: 50%;
+    float: left;
+    font-weight: bold;
+    font-size: 40px;
+    margin-left: -20px;
+    color: white;
+}
+
+section>p+div+div+div {
+    display: grid;
+    gap: 5vw;
+    grid-template-rows: repeat(auto-fill, minmax(230px, 2fr));
+    margin: 5vw;
+}
+
+.image {
+    width: 100%;
+    height: 500px;
+    border-radius: 30px 30px 0px 0px;
+    margin-top: -30px;
+}
+
+.menu_nav {
+    border-radius: 30px;
+    background-color: white;
+    box-shadow: var(--ombre);
+}
+
+.position {
+    margin: 3vw;
+    font-weight: bold;
+}
+
+section a {
+    color: black;
+}
+
+section a:hover {
+    color: darkmagenta;
+}
+
+section a:active {
+    color: white;
+}
+
+.heart {
+    border: 2px solid rgb(141, 141, 141);
+    float: right;
+    padding: 20px 20px 20px 20px;
+}
+
+.heart:hover {
+    background-image: linear-gradient(palevioletred, violet);
+}
+
+.heart:active {
+    border: 2px solid white;
+}
+
+.new_world_1 {
+    position: relative;
+    color: green;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgb(183, 245, 91);
+    bottom: 580px;
+    left: 70px;
+    padding: 15px 25px 15px 25px;
+    border-radius: 10px;
+}
+
+.new_world_2 {
+    position: relative;
+    color: green;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgb(183, 245, 91);
+    bottom: 580px;
+    left: 180px;
+    padding: 15px 25px 15px 25px;
+    border-radius: 10px;
+}
+
+.name_food_home {
+    color: rgb(141, 141, 141);
+    margin: 3vw;
+}
+
+footer {
+    background-color: black;
+    color: black;
+    font-size: 40px;
+    padding: 5vw 5vw 2vw 0vw;
+    width: auto;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+footer>p:first-child img {
+    border: 1px solid white;
+    margin-left: 3vw;
+    padding: 0px;
+}
+
+footer li {
+    margin-bottom: 1vw;
+}
+
+@media all and (min-device-width: 700px) {
+    section {
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+}

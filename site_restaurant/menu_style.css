@@ -1,0 +1,183 @@
+body {
+    background-color: rgb(238, 238, 238);
+    margin: 0px;
+    padding: 0px;
+}
+
+:root {
+    --ombre: 5px 23px 20px rgb(218, 218, 218);
+}
+
+body header {
+    background-color: white;
+    text-align: center;
+    width: auto;
+    padding: 45px 0px 0px 0px;
+    margin: 0vw;
+}
+
+header a {
+    position: absolute;
+    color: black;
+    font-size: 45px;
+    font-weight: bold;
+    left: 5%;
+    top: 3%;
+}
+
+.food_peacture {
+    width: 100%;
+    height: 800px;
+    padding: 0px;
+    margin-bottom: 0px;
+}
+
+.title_page {
+    font-size: 90px;
+    font-weight: bold;
+    padding-top: 3vw;
+}
+
+section {
+    background-color: rgb(238, 238, 238);
+    position: relative;
+    margin-top: -20vw;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+}
+
+.block {
+    margin: 5vw;
+    padding: 0px;
+}
+
+.block div {
+    background-color: white;
+    box-shadow: var(--ombre);
+    border-radius: 40px;
+    margin: 4vw 0vw 4vw 0vw;
+    padding: 2vw;
+    opacity: 0;
+    animation: visibility 2s linear 3s forwards, dance 1s ease-in 2.6s forwards
+}
+
+.block>div p:first-child {
+    font-weight: bold;
+    font-size: 40px;
+    margin-top: 3px;
+    margin-bottom: 0px;
+}
+
+.heart {
+    border: 2px solid rgb(141, 141, 141);
+    padding: 20px 20px 20px 20px;
+    float: right;
+    margin-top: 40px;
+}
+
+.heart:hover {
+    background-image: linear-gradient(palevioletred, violet);
+}
+
+.heart:active {
+    border: 2px solid white;
+}
+
+.underline_design {
+    font-size: 40px;
+    text-decoration-line: underline;
+    text-decoration-color: aqua;
+}
+
+.block div p:nth-child(2) {
+    color: rgb(141, 141, 141);
+    font-size: 30px;
+    margin-top: 0px;
+    margin-bottom: 2px;
+}
+
+.block div p:nth-child(2) span {
+    font-weight: bold;
+    color: black;
+    float: right;
+}
+
+.command_box {
+    background-image: linear-gradient( palevioletred, violet);
+    font-size: 20px;
+    box-shadow: var(--ombre);
+    padding: 25px 0px 25px 0px;
+    margin: 5vw 20vw 5vw 20vw;
+    border-radius: 80px;
+    color: white;
+    text-align: center;
+}
+
+.command_box:hover {
+    color: black;
+    box-shadow: 0px 0px 0px rgb(238, 238, 238);
+}
+
+.command_box:active {
+    background: white;
+    border: 15px double palevioletred;
+}
+
+footer {
+    background-color: black;
+    color: black;
+    font-size: 40px;
+    padding: 5vw 5vw 2vw 0vw;
+    width: auto;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+footer>p:first-child img {
+    border: 1px solid white;
+    margin-left: 3vw;
+    padding: 0px;
+}
+
+footer li {
+    margin-bottom: 1vw;
+}
+
+@keyframes visibility {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes dance {
+    from {
+        box-shadow: -50px 0px 20px rgb(146, 146, 146);
+        margin-top: 2px;
+    }
+    to {
+        box-shadow: 5px 23px 20px rgb(146, 146, 146);
+        margin-top: -2px;
+    }
+}
+
+@media all and (min-device-width: 700px) {
+    .block {
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+}
+
+@media all and (max-device-width:341px) {
+    .block {
+        margin: 0%;
+    }
+    .block div p:nth-child(2) span {
+        float: none;
+    }
+}
